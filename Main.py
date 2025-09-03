@@ -121,8 +121,8 @@ def chatbot_with_image(user_prompt, image=None, temperature=0.7, top_k=40):
             return f"Error: {str(e)}", None
 
 # Streamlit UI
-st.set_page_config(page_title="Multi-Modal ChatBot", layout="wide")
-st.title("🤖 Multi-Modal ChatBot")
+st.set_page_config(page_title="PIC Insights ChatBot", layout="wide")
+st.title("🤖 PIC Insights ChatBot")
 st.markdown("*Ask questions, upload images, or both! Your conversation history is automatically saved.*")
 
 # Sidebar for conversation management and model parameters
