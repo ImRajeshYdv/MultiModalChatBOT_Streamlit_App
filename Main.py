@@ -182,7 +182,7 @@ with col1:
                             data = entry['image_data']
                             # Show directly if it's a PIL image
                             if isinstance(data, Image.Image):
-                                st.image(data, width=200)
+                                st.image(data, width=20)
                             else:
                                 # Legacy/back-compat: support dict with base64, or raw/base64 strings/bytes
                                 img_obj = None
@@ -198,7 +198,7 @@ with col1:
                                     except Exception:
                                         img_obj = None
                                 if img_obj is not None:
-                                    st.image(img_obj, width=200)
+                                    st.image(img_obj, width=20)
                         except Exception as e:
                             st.error(f"Error displaying image: {str(e)}")
             elif entry['type'] == 'assistant':
@@ -227,7 +227,8 @@ with col2:
         if is_valid_size:
             try:
                 image = Image.open(uploaded_image)
-                st.image(image, caption="Uploaded Image", width=200)
+                # st.image(image, caption="Uploaded Image", width=30)
+                st.image(image, width=20)
                 st.success("✅ Image uploaded successfully!")
                 
                 # Show file size info
